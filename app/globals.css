@@ -120,3 +120,63 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Custom styles for markdown content */
+.prose {
+  @apply text-gray-800;
+}
+
+.prose h1 {
+  @apply text-2xl font-bold mb-4 text-gray-900;
+}
+
+.prose h2 {
+  @apply text-xl font-semibold mb-3 text-gray-900;
+}
+
+.prose h3 {
+  @apply text-lg font-medium mb-2 text-gray-900;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-4 space-y-1;
+}
+
+.prose ol {
+  @apply list-decimal list-inside mb-4 space-y-1;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-blue-300 pl-4 italic text-gray-600 mb-4;
+}
+
+.prose code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+/* Wallet connection animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
